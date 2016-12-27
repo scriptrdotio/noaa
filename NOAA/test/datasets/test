@@ -1,0 +1,8 @@
+var data = require("NOAA/dataSets");
+var config = require("NOAA/auth/config")
+
+var mydatasets = new data.dataSets();
+var sets = mydatasets.getDataSets();
+//return sets;
+mydatasets.getDataSetsFromId(mydatasets.data[0].id);
+return mydatasets;

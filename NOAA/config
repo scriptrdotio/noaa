@@ -1,0 +1,11 @@
+/**
+  *token that the developer purchase from https://www.ncdc.noaa.gov/cdo-web/token
+**/
+var token = "YOUR_TOKEN";
+/**
+ *base url
+**/
+var baseUrl = "laxhttps://www.ncdc.noaa.gov/cdo-web/api/v2/";
+function getToken(){
+  return token;
+}

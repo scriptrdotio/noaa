@@ -1,5 +1,5 @@
-var data = require("NOAA/dataTypes");
-var config = require("NOAA/auth/config")
+var data = require("../../dataTypes");
+var config = require("../../config")
 
 var myDataTypes = new data.dataTypes();
 var types = myDataTypes.getDataTypes();

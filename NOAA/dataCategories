@@ -25,11 +25,11 @@ dataCategories.prototype.getDataCategories = function(dto){
       for(var key in params){
     body = body +key+"="+params[key]+"&";
   }
- 
+ var url = config.baseUrl+"datacategories/"+body.substring(0,body.length-1);
+  //return url;
   var requestData = http.request({
-    "url":config.baseUrl+"datacategories/"+body.substring(0,body.length-1),
+    "url": url,
     "headers":{"token":config.getToken()},
-    "bodyString":params,
     "method":"GET"
   });
     if (requestData.status >= "200" && requestData.status < "300") {

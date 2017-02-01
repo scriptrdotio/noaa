@@ -1,8 +1,17 @@
-var data = require("NOAA/dataSets");
-var config = require("NOAA/auth/config")
+var data = require("../../dataSets");
+var config = require("../../config");
+var today = JSON.stringify(new Date());
 
 var mydatasets = new data.dataSets();
 var sets = mydatasets.getDataSets();
+return sets;
+today = today.substring(0,today.indexOf("T"));
+return today
 //return sets;
-mydatasets.getDataSetsFromId(mydatasets.data[0].id);
+var dto = {
+  "startdate":today,
+  "enddate": today
+};
+
+return mydatasets.getData(mydatasets.data[0].id, dto);
 return mydatasets;

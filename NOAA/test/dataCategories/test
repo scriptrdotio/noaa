@@ -1,7 +1,9 @@
-var data = require("NOAA/dataCategories");
-var config = require("NOAA/auth/config")
+var data = require("../../dataCategories");
+var config = require("../../config");
 
 var mydataCategories = new data.dataCategories();
+
 var categories = mydataCategories.getDataCategories();
+return categories;
 mydataCategories.getDataCategoriesFromId(mydataCategories.data[0].id);
 return mydataCategories;
